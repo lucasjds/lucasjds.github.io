@@ -31,6 +31,15 @@
 
   gtag('config', 'UA-128507799-1');
 ga('send', 'event', eventCategory, , eventLabel, eventValue);
+	if ("ga" in window) {
+
+    tracker = ga.getAll()[0];
+
+    if (tracker){
+alert("oi");
+        tracker.send('event', 'test linkedin', 'clicked', 'div');
+    }
+}
 </script>
 
   <script src="js/main.js"></script>
